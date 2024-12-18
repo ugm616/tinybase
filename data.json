@@ -6,7 +6,6 @@
     "DETAILS": "None",
     "EXPIRY": "01/01/26"
   },
-  
   {
     "PIN": "654321",
     "NAME": "John Smith",
@@ -14,7 +13,6 @@
     "DETAILS": "Current Champion",
     "EXPIRY": "01/01/26"
   },
-  
     {
     "PIN": "456789",
     "NAME": "SWA",
@@ -22,7 +20,6 @@
     "DETAILS": "None",
     "EXPIRY": "01/01/26"
   },
-  
   {
     "PIN": "987654",
     "NAME": "GWF",
@@ -30,5 +27,4 @@
     "DETAILS": "None",
     "EXPIRY": "01/01/26"
   },
-  
 ]
