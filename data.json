@@ -1,0 +1,5 @@
+[
+  {"code": "123456", "name": "John Doe", "age": 30, "department": "HR"},
+  {"code": "654321", "name": "Jane Smith", "age": 25, "department": "Finance"}
+  // Add more entries as needed
+]
