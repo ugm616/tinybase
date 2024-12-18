@@ -2,7 +2,7 @@
   {
     "PIN": "123456",
     "NAME": "John Doe",
-    "TYPE": Comp,
+    "TYPE": "Comp",
     "DETAILS": "None"
     "EXPIRY": "01/01/26"
   },
@@ -10,14 +10,14 @@
   {
     "PIN": "654321",
     "NAME": "John Smith",
-    "TYPE": Comp,
+    "TYPE": "Comp",
     "DETAILS": "Current Champion"
     "EXPIRY": "01/01/26"
   }
     {
     "PIN": "456789",
     "NAME": "SWA",
-    "TYPE": Efed,
+    "TYPE": "Efed",
     "DETAILS": "None"
     "EXPIRY": "01/01/26"
   },
@@ -25,7 +25,7 @@
   {
     "PIN": "987654",
     "NAME": "GWF",
-    "TYPE": Efed,
+    "TYPE": "Efed",
     "DETAILS": "None"
     "EXPIRY": "01/01/26"
   }
