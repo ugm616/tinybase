@@ -4,6 +4,7 @@
     "NAME": "John Doe",
     "TYPE": Comp,
     "DETAILS": "None"
+    "EXPIRY": "01/01/26"
   },
   
   {
@@ -11,5 +12,6 @@
     "NAME": "John Smith",
     "TYPE": Comp,
     "DETAILS": "Current Champion"
+    "EXPIRY": "01/01/26"
   }
 ]
