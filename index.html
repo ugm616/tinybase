@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Excel Data Reader</title>
+    <style>
+        body {
+            background-color: black;
+            color: #d3d3d3;
+            font-family: 'Courier New', Courier, monospace;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            text-align: center;
+        }
+        input, button {
+            margin: 10px;
+            padding: 10px;
+            background-color: #333;
+            color: #d3d3d3;
+            border: none;
+            border-radius: 5px;
+        }
+        table {
+            margin-top: 20px;
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid #555;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Excel Data Reader</h1>
+        <input type="file" id="inputFile" />
+        <input type="text" id="codeInput" placeholder="Enter 6-digit code" />
+        <button onclick="readExcel()">Read Excel</button>
+        <div id="output"></div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.0/xlsx.full.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
