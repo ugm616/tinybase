@@ -1,38 +1,32 @@
-let workbook;
+let jsonData;
 
-// Load the Excel file from the same directory as the HTML file
-fetch('Testsheet.xlsx')
+// Load the JSON file from the same directory as the HTML file
+fetch('data.json')
     .then(response => {
         if (!response.ok) {
             throw new Error('Network response was not ok ' + response.statusText);
         }
-        return response.arrayBuffer();
+        return response.json();
     })
     .then(data => {
-        workbook = XLSX.read(new Uint8Array(data), { type: 'array' });
-        console.log('Excel file loaded successfully');
+        jsonData = data;
+        console.log('JSON file loaded successfully');
     })
-    .catch(error => console.error('Error loading the Excel file:', error));
+    .catch(error => console.error('Error loading the JSON file:', error));
 
-function readExcel() {
+function readData() {
     const code = document.getElementById('codeInput').value.trim();
-    if (!workbook) {
-        alert('Excel file not loaded yet.');
+    if (!jsonData) {
+        alert('JSON file not loaded yet.');
         return;
     }
 
     console.log('Entered code:', code);
+    console.log('JSON data:', jsonData);
 
-    const sheetName = workbook.SheetNames[0];
-    const worksheet = workbook.Sheets[sheetName];
-    const jsonData = XLSX.utils.sheet_to_json(worksheet, { header: 1 });
+    const headers = Object.keys(jsonData[0]);
+    const result = jsonData.find(row => row.code === code);
 
-    console.log('Sheet data:', jsonData);
-
-    const headers = jsonData[0];
-    const dataRows = jsonData.slice(1);
-
-    const result = dataRows.find(row => row[0].toString().trim() === code);
     if (result) {
         displayResult(headers, result);
     } else {
@@ -48,8 +42,8 @@ function displayResult(headers, data) {
     });
     html += '</tr>';
     html += '<tr>';
-    data.forEach(cell => {
-        html += `<td>${cell}</td>`;
+    headers.forEach(header => {
+        html += `<td>${data[header]}</td>`;
     });
     html += '</tr>';
     html += '</table>';
