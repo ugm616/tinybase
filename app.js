@@ -1,21 +1,17 @@
-document.getElementById('inputFile').addEventListener('change', handleFile, false);
-
 let workbook;
 
-function handleFile(e) {
-    const files = e.target.files;
-    const reader = new FileReader();
-    reader.onload = function(event) {
-        const data = new Uint8Array(event.target.result);
-        workbook = XLSX.read(data, { type: 'array' });
-    };
-    reader.readAsArrayBuffer(files[0]);
-}
+// Load the Excel file from the same directory as the HTML file
+fetch('Testsheet.xlsx')
+    .then(response => response.arrayBuffer())
+    .then(data => {
+        workbook = XLSX.read(new Uint8Array(data), { type: 'array' });
+    })
+    .catch(error => console.error('Error loading the Excel file:', error));
 
 function readExcel() {
     const code = document.getElementById('codeInput').value;
     if (!workbook) {
-        alert('Please upload an Excel file first.');
+        alert('Excel file not loaded yet.');
         return;
     }
 
