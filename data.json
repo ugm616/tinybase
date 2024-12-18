@@ -1,14 +1,15 @@
 [
   {
-    "code": "123456",
-    "name": "John Doe",
-    "age": 30,
-    "department": "HR"
+    "PIN": "123456",
+    "NAME": "John Doe",
+    "TYPE": Comp,
+    "DETAILS": "None"
   },
+  
   {
-    "code": "654321",
-    "name": "Jane Smith",
-    "age": 25,
-    "department": "Finance"
+    "PIN": "654321",
+    "NAME": "John Smith",
+    "TYPE": Comp,
+    "DETAILS": "Current Champion"
   }
 ]
