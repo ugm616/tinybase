@@ -5,6 +5,7 @@ fetch('Testsheet.xlsx')
     .then(response => response.arrayBuffer())
     .then(data => {
         workbook = XLSX.read(new Uint8Array(data), { type: 'array' });
+        console.log('Excel file loaded successfully');
     })
     .catch(error => console.error('Error loading the Excel file:', error));
 
